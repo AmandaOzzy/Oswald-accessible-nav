@@ -28,8 +28,7 @@ Your navigation must include the following:
 
 You must submit the following to Brightspace by the due date and time:
 
-1. A GitHub link to your completed version of the starter code, Accessible Navigation project folder that was forked
-from the original repostitory.
+1. A GitHub link to your completed version of the starter code, Accessible Navigation project folder that was forked from the original repostitory.
 
 Late submissions will **not** be accepted. See Digital Design’s Assessment Extension Guidelines
 
