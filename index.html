@@ -19,7 +19,7 @@
 
 <body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header>
     <div class="inner-container">
 
@@ -34,57 +34,58 @@
           <span></span>
         </span>
         <span class="logo-text">Pigment<span>&amp;</span>Co</span>
+        </span>
       </a>
 
       <!-- Main navigation starts here -->
+      <nav aria-label="Primary navigation">
+
+        <!-- Paints -->
+        Paints
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+
+        Oil Paints
+        Acrylic Paints
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
 
 
-      <!-- Paints -->
-      Paints
-      <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
+        Heavy Body Acrylics
+        Soft Body Acrylics
+        Fluid Acrylics
+        Acrylic Gouache
+        Open Slow-Dry Acrylics
 
-      Oil Paints
-      Acrylic Paints
-      <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
+        Watercolours
+        Gouache
+        Inks &amp; Drawing Inks
+        Spray Paints
+        Mediums &amp; Additives
+        Gesso &amp; Grounds
 
+        <!-- Drawing -->
 
-      Heavy Body Acrylics
-      Soft Body Acrylics
-      Fluid Acrylics
-      Acrylic Gouache
-      Open Slow-Dry Acrylics
-
-      Watercolours
-      Gouache
-      Inks &amp; Drawing Inks
-      Spray Paints
-      Mediums &amp; Additives
-      Gesso &amp; Grounds
-
-      <!-- Drawing -->
-
-      Drawing
-      <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
+        Drawing
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
 
 
-      Pencils
-      Charcoal
-      Pastels
+        Pencils
+        Charcoal
+        Pastels
 
-      Pens &amp; Markers
-      <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
+        Pens &amp; Markers
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
 
         Fine Liners
         Brush Pens
@@ -92,26 +93,26 @@
         Calligraphy Pens
         Gel Pens
 
-      Sketchbooks
-      Erasers &amp; Sharpeners
+        Sketchbooks
+        Erasers &amp; Sharpeners
 
-      <!-- Surfaces -->
-      Surfaces
-
-
-      <!-- Tools -->
-      Tools
-      <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
+        <!-- Surfaces -->
+        Surfaces
 
 
-      Brushes
-      <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
+        <!-- Tools -->
+        Tools
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+
+
+        Brushes
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
 
         Oil &amp; Acrylic Brushes
         Watercolour Brushes
@@ -119,15 +120,16 @@
         Detail Brushes
         Brush Sets
 
-      Palette Knives
-      Easels
-      Palettes
-      Drawing Boards &amp; Rulers
-      Varnishes &amp; Finishes
+        Palette Knives
+        Easels
+        Palettes
+        Drawing Boards &amp; Rulers
+        Varnishes &amp; Finishes
 
-      Studio
-      
-      Sale
+        Studio
+
+        Sale
+      </nav>
 
       <!-- Nav actions: cart, search, hamburger -->
       <div class="nav-actions">
@@ -152,11 +154,15 @@
         </button>
 
         <!-- Hamburger: mobile only -->
-        <div class="nav-toggle">
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="primary-navigation">
+
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+
+        </button>
+
 
       </div>
 
@@ -199,7 +205,7 @@
     <div class="inner-container">
       <p class="footer-logo">Pigment<span>&amp;</span>Co</p>
 
-      <nav>
+      <nav aria-label="Footer navigation">
         <ul class="footer-links">
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
