@@ -277,6 +277,7 @@ header>.inner-container {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Accessibility: Visible keyboard focus indicators */
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--yellow);
@@ -454,5 +455,16 @@ footer .inner-container>p:last-child {
 
   .hero {
     padding: 6rem 0;
+  }
+}
+
+/* Accessibility: Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
