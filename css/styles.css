@@ -152,7 +152,11 @@ header>.inner-container {
   gap: 1rem;
 }
 
-
+#primary-navigation .nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 /** ––– Logo ––– **/
 
 .logo {

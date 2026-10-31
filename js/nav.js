@@ -1,1 +1,42 @@
 //Add your JS here for your menu
+const menuButtons = document.querySelectorAll(
+  '#primary-navigation button[aria-controls]'
+);
+
+function setMenuOpen(button, isOpen) {
+  const menuId = button.getAttribute('aria-controls');
+  const menu = document.getElementById(menuId);
+
+  if (!menu) {
+    console.error(`Menu not found: #${menuId}`);
+    return;
+  }
+
+  button.setAttribute('aria-expanded', String(isOpen));
+  menu.hidden = !isOpen;
+
+  if (!isOpen) {
+    menu
+      .querySelectorAll('button[aria-controls]')
+      .forEach((nestedButton) => setMenuOpen(nestedButton, false));
+  }
+}
+
+menuButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    setMenuOpen(button, !isOpen);
+  });
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('#primary-navigation')) {
+    menuButtons.forEach((button) => setMenuOpen(button, false));
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    menuButtons.forEach((button) => setMenuOpen(button, false));
+  }
+});
