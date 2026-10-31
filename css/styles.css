@@ -158,21 +158,20 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   width: 100%;
 }
 
-#primary-navigation ul button {
-      display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    text-align: left;
+.nav-list > li > button,
+.nav-list > li > a {
     color: white;
 }
 
-#primary-navigation ul a{
-      display: block;
+.nav-list ul button,
+.nav-list ul a {
+    display: block;
     width: 100%;
     padding: 0.75rem 1rem;
     text-align: left;
-    color: rgb(0, 0, 0);
+    color: var(--charcoal);
 }
+
 #acrylic-menu,
 #pens-markers-menu,
 #brushes-menu {
