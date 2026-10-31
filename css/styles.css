@@ -125,6 +125,26 @@ nav button {
   gap: 0.25rem;
 }
 
+#paints-menu,
+#drawing-menu,
+#tools-menu{
+position: absolute;
+top: 100%;
+left: 0;
+background: white;
+min-width: 250px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item>ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
 /** ––– Utility ––– **/
 .inner-container {
   max-width: 90rem;
@@ -157,6 +177,7 @@ header>.inner-container {
   align-items: center;
   gap: 1rem;
 }
+
 /** ––– Logo ––– **/
 
 .logo {
@@ -468,6 +489,7 @@ footer .inner-container>p:last-child {
 
 /* Accessibility: Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -478,11 +500,11 @@ footer .inner-container>p:last-child {
 }
 
 #primary-navigation ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #primary-navigation li {
-    list-style: none;
+  list-style: none;
 }
