@@ -38,138 +38,116 @@
 
       <!-- Main navigation starts here -->
       <nav aria-label="Primary navigation" id="primary-navigation">
+        <ul class="nav-list">
 
-        <!-- Paints -->
-        <button type="button" aria-expanded="false">
+          <li class="nav-item nav-paints">
+            <button type="button" aria-expanded="false" aria-controls="paints-menu">
+              Paints
+            </button>
 
-          Paints
+            <!-- Paints menu -->
 
-          <svg class="chevron" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24"
-            fill="none">
+            <ul id="paints-menu" hidden>
+              <li><a href="#">Oil Paints</a></li>
+              <li>
+                <button type="button" aria-expanded="false" aria-controls="acrylic-menu">
+                  Acrylic Paints
+                </button>
 
-            <polyline points="6 9 12 15 18 9" />
+                <!-- Acrylic Paints menu -->
 
-          </svg>
+                <ul id="acrylic-menu" hidden>
+                  <li><a href="#">Heavy Body Acrylics</a></li>
+                  <li><a href="#">Soft Body Acrylics</a></li>
+                  <li><a href="#">Fluid Acrylics</a></li>
+                  <li><a href="#">Acrylic Gouache</a></li>
+                  <li><a href="#">Open Slow-Dry Acrylics</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Watercolours</a></li>
+              <li><a href="#">Gouache</a></li>
+              <li><a href="#">Inks &amp; Drawing Inks</a></li>
+              <li><a href="#">Spray Paints</a></li>
+              <li><a href="#">Mediums &amp; Additives</a></li>
+              <li><a href="#">Gesso &amp; Grounds</a></li>
+            </ul>
+          </li>
 
-        </button>
+          <li class="nav-item nav-drawing">
+            <button type="button" aria-expanded="false" aria-controls="drawing-menu">
+              Drawing
+            </button>
 
-        Oil Paints
-        <button type="button" aria-expanded="false">
+            <!-- Drawing menu -->
 
-          Acrylic Paints
+            <ul id="drawing-menu" hidden>
+              <li><a href="#">Pencils</a></li>
+              <li><a href="#">Charcoal</a></li>
+              <li><a href="#">Pastels</a></li>
+              <li>
+                <button type="button" aria-expanded="false" aria-controls="pens-markers-menu">
+                  Pens &amp; Markers
+                </button>
 
-          <svg class="chevron" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24"
-            fill="none">
+                <!-- Pens & Markers menu -->
 
-            <polyline points="6 9 12 15 18 9" />
+                <ul id="pens-markers-menu" hidden>
+                  <li><a href="#">Fine Liners</a></li>
+                  <li><a href="#">Brush Pens</a></li>
+                  <li><a href="#">Alcohol Markers</a></li>
+                  <li><a href="#">Calligraphy Pens</a></li>
+                  <li><a href="#">Gel Pens</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Sketchbooks</a></li>
+              <li><a href="#">Erasers &amp; Sharpeners</a></li>
+            </ul>
+          </li>
 
-          </svg>
+          <li class="nav-item nav-surfaces">
+            <a href="#">Surfaces</a>
+          </li>
 
-        </button>
+          <li class="nav-item nav-tools">
+            <button type="button" aria-expanded="false" aria-controls="tools-menu">
+              Tools
+            </button>
 
+            <!-- Tools menu -->
 
-        Heavy Body Acrylics
-        Soft Body Acrylics
-        Fluid Acrylics
-        Acrylic Gouache
-        Open Slow-Dry Acrylics
+            <ul id="tools-menu" hidden>
+              <li>
+                <button type="button" aria-expanded="false" aria-controls="brushes-menu">
+                  Brushes
+                </button>
 
-        Watercolours
-        Gouache
-        Inks &amp; Drawing Inks
-        Spray Paints
-        Mediums &amp; Additives
-        Gesso &amp; Grounds
+                <!-- Brushes menu -->
+                 
+                <ul id="brushes-menu" hidden>
+                  <li><a href="#">Oil &amp; Acrylic Brushes</a></li>
+                  <li><a href="#">Watercolour Brushes</a></li>
+                  <li><a href="#">Fan Brushes</a></li>
+                  <li><a href="#">Detail Brushes</a></li>
+                  <li><a href="#">Brush Sets</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Palette Knives</a></li>
+              <li><a href="#">Easels</a></li>
+              <li><a href="#">Palettes</a></li>
+              <li><a href="#">Drawing Boards &amp; Rulers</a></li>
+              <li><a href="#">Varnishes &amp; Finishes</a></li>
+            </ul>
+          </li>
 
-        <!-- Drawing -->
+          <li class="nav-item nav-studio">
+            <a href="#">Studio</a>
+          </li>
 
-        <button type="button" aria-expanded="false">
+          <li class="nav-item nav-sale">
+            <a href="#">Sale</a>
+          </li>
 
-          Drawing
-
-          <svg class="chevron" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24"
-            fill="none">
-
-            <polyline points="6 9 12 15 18 9" />
-
-          </svg>
-
-        </button>
-
-
-        Pencils
-        Charcoal
-        Pastels
-
-        <button type="button" aria-expanded="false">
-
-          Pens & Markers
-
-          <svg class="chevron" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24"
-            fill="none">
-
-            <polyline points="6 9 12 15 18 9" />
-
-          </svg>
-
-        </button>
-
-        Fine Liners
-        Brush Pens
-        Alcohol Markers
-        Calligraphy Pens
-        Gel Pens
-
-        Sketchbooks
-        Erasers &amp; Sharpeners
-
-        <!-- Surfaces -->
-
-        Surfaces
-
-        <!-- Tools -->
-        <button type="button" aria-expanded="false">
-
-          Tools
-
-          <svg class="chevron" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24"
-            fill="none">
-
-            <polyline points="6 9 12 15 18 9" />
-
-          </svg>
-
-        </button>
-
-
-        <button type="button" aria-expanded="false">
-
-          Brushes
-
-          <svg class="chevron" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24"
-            fill="none">
-
-            <polyline points="6 9 12 15 18 9" />
-
-          </svg>
-
-        </button>
-
-        Oil &amp; Acrylic Brushes
-        Watercolour Brushes
-        Fan Brushes
-        Detail Brushes
-        Brush Sets
-
-        Palette Knives
-        Easels
-        Palettes
-        Drawing Boards &amp; Rulers
-        Varnishes &amp; Finishes
-
-        Studio
-
-        Sale
+        </ul>
       </nav>
 
       <!-- Nav actions: cart, search, hamburger -->

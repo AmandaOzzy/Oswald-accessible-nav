@@ -110,7 +110,7 @@ a {
   left: 1rem
 }
 
-button {
+nav button {
   background: none;
   border: none;
   padding: 0;
@@ -119,6 +119,11 @@ button {
   cursor: pointer;
 }
 
+nav button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
 
 /** ––– Utility ––– **/
 .inner-container {
@@ -445,7 +450,6 @@ footer .inner-container>p:last-child {
   color: #fff;
 }
 
-
 @media (min-width: 1024px) {
   footer>.inner-container {
     flex-direction: row;
@@ -467,4 +471,14 @@ footer .inner-container>p:last-child {
     transition: none !important;
     scroll-behavior: auto !important;
   }
+}
+
+#primary-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#primary-navigation li {
+    list-style: none;
 }
