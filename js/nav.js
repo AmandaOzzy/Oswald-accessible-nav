@@ -1,42 +1,59 @@
 //Add your JS here for your menu
 const menuButtons = document.querySelectorAll(
-  '#primary-navigation button[aria-controls]'
+    '#primary-navigation button[aria-controls]'
 );
 
 function setMenuOpen(button, isOpen) {
-  const menuId = button.getAttribute('aria-controls');
-  const menu = document.getElementById(menuId);
+    const menuId = button.getAttribute('aria-controls');
+    const menu = document.getElementById(menuId);
 
-  if (!menu) {
-    console.error(`Menu not found: #${menuId}`);
-    return;
-  }
+    if (!menu) {
+        console.error(`Menu not found: #${menuId}`);
+        return;
+    }
 
-  button.setAttribute('aria-expanded', String(isOpen));
-  menu.hidden = !isOpen;
+    button.setAttribute('aria-expanded', String(isOpen));
+    menu.hidden = !isOpen;
 
-  if (!isOpen) {
-    menu
-      .querySelectorAll('button[aria-controls]')
-      .forEach((nestedButton) => setMenuOpen(nestedButton, false));
-  }
+    if (!isOpen) {
+        menu
+            .querySelectorAll('button[aria-controls]')
+            .forEach((nestedButton) => setMenuOpen(nestedButton, false));
+    }
 }
 
 menuButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const isOpen = button.getAttribute('aria-expanded') === 'true';
-    setMenuOpen(button, !isOpen);
-  });
+    button.addEventListener('click', () => {
+        const isOpen = button.getAttribute('aria-expanded') === 'true';
+        setMenuOpen(button, !isOpen);
+    });
 });
 
 document.addEventListener('click', (event) => {
-  if (!event.target.closest('#primary-navigation')) {
-    menuButtons.forEach((button) => setMenuOpen(button, false));
-  }
+    if (!event.target.closest('#primary-navigation')) {
+        menuButtons.forEach((button) => setMenuOpen(button, false));
+    }
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    menuButtons.forEach((button) => setMenuOpen(button, false));
-  }
+    if (event.key === 'Escape') {
+        menuButtons.forEach((button) => setMenuOpen(button, false));
+    }
 });
+
+const navToggle = document.querySelector('.nav-toggle');
+const navigation = document.getElementById('primary-navigation');
+
+navToggle.addEventListener('click', () => {
+
+    const isOpen =
+        navToggle.getAttribute('aria-expanded') === 'true';
+
+    navToggle.setAttribute(
+        'aria-expanded',
+        String(!isOpen)
+    );
+
+    navigation.classList.toggle('open');
+});
+

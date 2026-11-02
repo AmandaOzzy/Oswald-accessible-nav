@@ -22,7 +22,6 @@
   --ease-medium: 0.25s ease;
 }
 
-
 /* ──
   Each .nav-* class sets three CSS custom properties that cascade
   into every child element automatically.
@@ -131,13 +130,13 @@ nav button {
 #studio-menu,
 #sale-menu,
 #surfaces-menu {
-position: absolute;
-top: 100%;
-left: 0;
-background: white;
-min-width: 250px;
-padding: 0.5rem 0;
-box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 250px;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .nav-item {
@@ -158,37 +157,31 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   width: 100%;
 }
 
-.nav-list > li > button,
-.nav-list > li > a {
-    color: white;
+.nav-list>li>button,
+.nav-list>li>a {
+  color: white;
 }
 
 .nav-list ul button,
 .nav-list ul a {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    text-align: left;
-    color: var(--charcoal);
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  color: var(--charcoal);
 }
 
 #acrylic-menu,
 #pens-markers-menu,
 #brushes-menu {
-    position: absolute;
-
-    top: 0;
-    left: 100%;
-
-    background: white;
-
-    min-width: 220px;
-
-    padding: 0.5rem 0;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
-    z-index: 101;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: white;
+  min-width: 220px;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 101;
 }
 
 /** ––– Header and navigation ––– **/
@@ -298,6 +291,8 @@ header>.inner-container {
   border-radius: 2px;
   position: relative;
   transition: color var(--ease-fast);
+  background-color: transparent;
+  border: none;
 }
 
 .icon-btn:hover {
@@ -333,6 +328,8 @@ header>.inner-container {
   height: 2.75rem;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 2px;
+  background-color: transparent;
+  border: none;
 }
 
 .bar {
@@ -361,7 +358,6 @@ button:focus-visible {
   color: rgba(255, 255, 255, 0.4);
 }
 
-
 /** ––– Large viewport (1024px+) ––– **/
 @media (min-width: 1024px) {
 
@@ -379,7 +375,6 @@ button:focus-visible {
 main {
   flex-grow: 1;
 }
-
 
 /** ––– Hero section ––– **/
 .hero {
@@ -512,18 +507,6 @@ footer .inner-container>p:last-child {
   color: #fff;
 }
 
-@media (min-width: 1024px) {
-  footer>.inner-container {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .hero {
-    padding: 6rem 0;
-  }
-}
-
 /* Accessibility: Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
 
@@ -544,4 +527,74 @@ footer .inner-container>p:last-child {
 
 #primary-navigation li {
   list-style: none;
+}
+
+/* Mobile */
+
+@media (max-width: 1023px) {
+
+  header {
+    position: relative;
+  }
+
+  #primary-navigation {
+    display: none;
+     width: 100%;
+  }
+
+  #primary-navigation.open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--charcoal);
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  #primary-navigation .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-item > button,
+  .nav-item > a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-item > ul {
+    position: static;
+    width: 100%;
+    min-width: unset;
+    box-shadow: none;
+  }
+
+  #acrylic-menu,
+  #pens-markers-menu,
+  #brushes-menu {
+    position: static;
+    width: 100%;
+    min-width: unset;
+    box-shadow: none;
+  }
+  
+  footer>.inner-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero {
+    padding: 6rem 0;
+  }
 }
