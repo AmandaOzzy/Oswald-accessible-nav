@@ -149,6 +149,10 @@ nav button {
   left: 0;
 }
 
+.nav-item>ul>li {
+  position: relative;
+}
+
 /** ––– Utility ––– **/
 .inner-container {
   max-width: 90rem;
@@ -597,4 +601,22 @@ footer .inner-container>p:last-child {
   .hero {
     padding: 6rem 0;
   }
+
+#acrylic-menu,
+#pens-markers-menu,
+#brushes-menu {
+    background: var(--charcoal);
+    position: static;
+    width: 100%;
+    min-width: unset;
+    box-shadow: none;
+    color: white;
+    padding-left: 1rem;
+}
+
+#acrylic-menu a,
+#pens-markers-menu a,
+#brushes-menu a {
+    color: white;
+}
 }
