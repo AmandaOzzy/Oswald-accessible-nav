@@ -172,7 +172,7 @@ nav button {
   width: 100%;
   padding: 0.75rem 1rem;
   text-align: left;
-  color: var(--charcoal);
+  color: white;
 }
 
 #acrylic-menu,
@@ -288,9 +288,7 @@ header>.inner-container {
   align-items: center;
   justify-content: center;
   width: 2.75rem;
-  /* 44px */
   height: 2.75rem;
-  /* 44px */
   color: rgba(255, 255, 255, 0.65);
   border-radius: 2px;
   position: relative;
@@ -543,7 +541,7 @@ footer .inner-container>p:last-child {
 
   #primary-navigation {
     display: none;
-     width: 100%;
+    width: 100%;
   }
 
   #primary-navigation.open {
@@ -568,30 +566,38 @@ footer .inner-container>p:last-child {
     width: 100%;
   }
 
-  .nav-item > button,
-  .nav-item > a {
+  .nav-item>button,
+  .nav-item>a {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 1rem;
   }
 
-  .nav-item > ul {
+  .nav-item>ul {
     position: static;
     width: 100%;
     min-width: unset;
     box-shadow: none;
   }
-
   #acrylic-menu,
   #pens-markers-menu,
-  #brushes-menu {
+  #brushes-menu,
+  #paints-menu,
+  #drawing-menu,
+  #tools-menu,
+  #studio-menu,
+  #sale-menu,
+  #surfaces-menu {
     position: static;
     width: 100%;
     min-width: unset;
     box-shadow: none;
+    color: white;
+    padding-left: 1rem;
+    background: var(--charcoal);
   }
-  
+
   footer>.inner-container {
     flex-direction: row;
     justify-content: space-between;
@@ -602,21 +608,4 @@ footer .inner-container>p:last-child {
     padding: 6rem 0;
   }
 
-#acrylic-menu,
-#pens-markers-menu,
-#brushes-menu {
-    background: var(--charcoal);
-    position: static;
-    width: 100%;
-    min-width: unset;
-    box-shadow: none;
-    color: white;
-    padding-left: 1rem;
-}
-
-#acrylic-menu a,
-#pens-markers-menu a,
-#brushes-menu a {
-    color: white;
-}
-}
+  }
