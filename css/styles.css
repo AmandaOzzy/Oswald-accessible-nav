@@ -1,5 +1,6 @@
+/*---- Brand accent colours ----*/
+
 :root {
-  /* Brand accent colours */
   --red: #E8174B;
   --orange: #FF7A00;
   --green: #00A86B;
@@ -8,24 +9,24 @@
   --yellow: #D4A017;
   --logo-yellow: #FFB800;
 
-  /* Neutrals */
+  /*---- Neutrals ----*/
+
   --charcoal: #0d0d0d;
   --off-white: #f7f5f0;
   --grey: #666;
 
-  /* Typography */
+  /*---- Typography ----*/
+
   --font-display: 'Bricolage Grotesque', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 
-  /* Motion */
+  /*---- Motion ----*/
+
   --ease-fast: 0.15s ease;
   --ease-medium: 0.25s ease;
 }
 
-/* ──
-  Each .nav-* class sets three CSS custom properties that cascade
-  into every child element automatically.
-  ── */
+/*---- Nav Classes and Colours ----*/
 
 .nav-paints {
   --item-clr: #E8174B;
@@ -64,7 +65,8 @@
 }
 
 
-/** ––– Base ––– **/
+/** ---- Base ---- **/
+
 html {
   scroll-behavior: smooth;
 }
@@ -78,8 +80,6 @@ body {
   flex-direction: column;
 }
 
-/** ––– Typography ––– **/
-
 ul,
 ol {
   list-style: none;
@@ -87,8 +87,8 @@ ol {
   padding: 0;
 }
 
+/** ---- Links ---- **/
 
-/** ––– Links and buttons ––– **/
 a {
   text-decoration: none;
   color: inherit;
@@ -109,6 +109,8 @@ a {
   left: 1rem
 }
 
+/** ---- Buttons ---- **/
+
 nav button {
   background: none;
   border: none;
@@ -116,13 +118,11 @@ nav button {
   font-family: inherit;
   color: inherit;
   cursor: pointer;
-}
-
-nav button {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
 }
+
 #primary-navigation button[aria-controls] {
   display: inline-flex;
   align-items: center;
@@ -162,17 +162,12 @@ nav button {
   position: relative;
 }
 
-.nav-item>ul {
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
 .nav-item>ul>li {
   position: relative;
 }
 
-/** ––– Utility ––– **/
+/** ---- Utility ---- **/
+
 .inner-container {
   max-width: 90rem;
   margin: auto;
@@ -207,13 +202,12 @@ nav button {
   z-index: 101;
 }
 
-/** ––– Header and navigation ––– **/
+/** ---- Header ---- **/
 
 header {
   background: var(--charcoal);
 }
 
-/* Flex row: logo | main-menu (desktop) | nav-actions */
 header>.inner-container {
   display: flex;
   align-items: center;
@@ -222,13 +216,15 @@ header>.inner-container {
   gap: 1rem;
 }
 
+/** ---- Navigation List ---- **/
+
 #primary-navigation .nav-list {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/** ––– Logo ––– **/
+/** ---- Logo ---- **/
 
 .logo {
   display: flex;
@@ -291,14 +287,16 @@ header>.inner-container {
 }
 
 
-/** ––– Nav actions (cart, search, hamburger) ––– **/
+/** ---- Nav actions (cart, search, hamburger) ---- **/
+
 .nav-actions {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
 
-/* Touch target sizing: 44x44px */
+/** ---- Touch target sizing ---- **/
+
 .icon-btn {
   display: flex;
   align-items: center;
@@ -334,7 +332,8 @@ header>.inner-container {
   line-height: 1;
 }
 
-/** ––– Hamburger button and bars ––– **/
+/** ---- Hamburger button and bars ---- **/
+
 .nav-toggle {
   display: flex;
   flex-direction: column;
@@ -342,7 +341,6 @@ header>.inner-container {
   justify-content: center;
   gap: 6px;
   width: 2.75rem;
-  /* 44px */
   height: 2.75rem;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 2px;
@@ -359,42 +357,32 @@ header>.inner-container {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Accessibility: Visible keyboard focus indicators */
+/** ---- Accessibility: Visible keyboard focus indicators ---- **/
+
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--yellow);
   outline-offset: 4px;
 }
 
-/** ––– Chevron ––– **/
+/** ---- Chevron ---- **/
+
 .chevron {
   flex-shrink: 0;
 }
 
-/* Chevron colour in sub-menus */
 .sub-menu>li>.sub-trigger .chevron {
   color: rgba(255, 255, 255, 0.4);
 }
 
-/** ––– Large viewport (1024px+) ––– **/
-@media (min-width: 1024px) {
+/** ---- Main ---- **/
 
-  /* Hide the hamburger on desktop */
-  .nav-toggle {
-    display: none;
-  }
-
-  .nav-actions {
-    margin-left: 0;
-  }
-}
-
-/** ––– Main ––– **/
 main {
   flex-grow: 1;
 }
 
-/** ––– Hero section ––– **/
+/** ---- Hero section ---- **/
+
 .hero {
   text-align: center;
   padding: 4rem 0;
@@ -441,8 +429,8 @@ main {
   background: var(--red);
 }
 
+/** ---- Footer ---- **/
 
-/** ––– Footer ––– **/
 footer {
   background: var(--charcoal);
 }
@@ -525,7 +513,8 @@ footer .inner-container>p:last-child {
   color: #fff;
 }
 
-/* Accessibility: Respect reduced motion preferences */
+/** ---- Accessibility: Respect reduced motion preferences ---- **/
+
 @media (prefers-reduced-motion: reduce) {
 
   *,
@@ -537,17 +526,21 @@ footer .inner-container>p:last-child {
   }
 }
 
-#primary-navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/** ---- Large viewport (1024px and up) ---- **/
+
+@media (min-width: 1024px) {
+
+  /* Hide the hamburger on desktop */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-actions {
+    margin-left: 0;
+  }
 }
 
-#primary-navigation li {
-  list-style: none;
-}
-
-/* Mobile */
+/** ---- Mobile ---- **/
 
 @media (max-width: 1023px) {
 
@@ -596,6 +589,7 @@ footer .inner-container>p:last-child {
     min-width: unset;
     box-shadow: none;
   }
+
   #acrylic-menu,
   #pens-markers-menu,
   #brushes-menu,
@@ -629,4 +623,4 @@ footer .inner-container>p:last-child {
     padding: 6rem 0;
   }
 
-  }
+}

@@ -1,7 +1,14 @@
-//Add your JS here for your menu
+/*----- Menu Elements -----*/
+
 const menuButtons = document.querySelectorAll(
     '#primary-navigation button[aria-controls]'
 );
+
+const navToggle = document.querySelector('.nav-toggle');
+
+const navigation = document.getElementById('primary-navigation');
+
+/*----- Open / Close Menu -----*/
 
 function setMenuOpen(button, isOpen) {
     const menuId = button.getAttribute('aria-controls');
@@ -22,6 +29,8 @@ function setMenuOpen(button, isOpen) {
     }
 }
 
+/*----- Menu Button Clicks -----*/
+
 menuButtons.forEach((button) => {
     button.addEventListener('click', () => {
         const isOpen = button.getAttribute('aria-expanded') === 'true';
@@ -29,31 +38,34 @@ menuButtons.forEach((button) => {
     });
 });
 
+/*----- Click Outside -----*/
+
 document.addEventListener('click', (event) => {
     if (!event.target.closest('#primary-navigation')) {
         menuButtons.forEach((button) => setMenuOpen(button, false));
     }
 });
 
+/*----- Escape Key -----*/
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         menuButtons.forEach((button) => setMenuOpen(button, false));
+        navigation.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.focus();
     }
 });
 
-const navToggle = document.querySelector('.nav-toggle');
-const navigation = document.getElementById('primary-navigation');
+/*----- Mobile Navigation Toggle -----*/
 
 navToggle.addEventListener('click', () => {
-
     const isOpen =
         navToggle.getAttribute('aria-expanded') === 'true';
-
     navToggle.setAttribute(
         'aria-expanded',
         String(!isOpen)
     );
 
-    navigation.classList.toggle('open');
+    navigation.classList.toggle('open', !isOpen);
 });
 
