@@ -123,6 +123,25 @@ nav button {
   align-items: center;
   gap: 0.25rem;
 }
+#primary-navigation button[aria-controls] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+#primary-navigation button[aria-controls]::after {
+  content: "";
+  width: 0.70rem;
+  height: 0.70rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+#primary-navigation button[aria-controls]:hover::after {
+  border-color: var(--item-clr);
+}
 
 #paints-menu,
 #drawing-menu,
@@ -172,7 +191,7 @@ nav button {
   width: 100%;
   padding: 0.75rem 1rem;
   text-align: left;
-  color: white;
+  color: #000;
 }
 
 #acrylic-menu,
@@ -192,9 +211,6 @@ nav button {
 
 header {
   background: var(--charcoal);
-  /* position: sticky;
-  top: 0;
-  z-index: 40; */
 }
 
 /* Flex row: logo | main-menu (desktop) | nav-actions */
@@ -596,6 +612,11 @@ footer .inner-container>p:last-child {
     color: white;
     padding-left: 1rem;
     background: var(--charcoal);
+  }
+
+  .nav-list ul button,
+  .nav-list ul a {
+    color: white;
   }
 
   footer>.inner-container {
