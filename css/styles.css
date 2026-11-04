@@ -36,7 +36,8 @@
   --item-text: #9a0e30;
 }
 
-.nav-paints>button[aria-expanded="true"] {
+.nav-paints> button[aria-expanded="true"] {
+  color: var(--red);
   border-bottom: 4px solid var(--red);
 }
 
@@ -410,7 +411,7 @@ header>.inner-container {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--yellow);
+  outline: 4px solid var(white);
   outline-offset: 4px;
 }
 
