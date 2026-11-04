@@ -126,7 +126,7 @@ body {
   font-family: var(--font-body);
   background: var(--off-white);
   color: var(--charcoal);
-
+  font-family: 'DM Sans', sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -172,6 +172,7 @@ nav button {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
+  font-family: 'DM Sans', sans-serif;
 }
 
 #primary-navigation button[aria-controls] {
@@ -231,6 +232,7 @@ nav button {
   padding: 0.65rem 1rem;
   text-align: left;
   color: #000;
+  font-family: 'DM Sans', sans-serif;
 }
 
 #acrylic-menu,
