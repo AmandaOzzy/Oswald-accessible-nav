@@ -190,10 +190,6 @@ nav button {
   transform: rotate(45deg);
 }
 
-#primary-navigation button[aria-controls]:hover::after {
-  border-color: var(--item-clr);
-}
-
 #paints-menu,
 #drawing-menu,
 #tools-menu {
@@ -579,8 +575,6 @@ footer .inner-container>p:last-child {
 /** ---- Large viewport (1024px and up) ---- **/
 
 @media (min-width: 1024px) {
-
-  /* Hide the hamburger on desktop */
   .nav-toggle {
     display: none;
   }
@@ -588,12 +582,12 @@ footer .inner-container>p:last-child {
   .nav-actions {
     margin-left: 0;
   }
+
 }
 
 /** ---- Mobile ---- **/
 
 @media (max-width: 1023px) {
-
   header {
     position: relative;
   }
@@ -660,7 +654,7 @@ footer .inner-container>p:last-child {
 
   .nav-list ul button,
   .nav-list ul a {
-    color: white;
+    color: var(--grey);
   }
 
   footer>.inner-container {
@@ -674,3 +668,4 @@ footer .inner-container>p:last-child {
   }
 
 }
+
